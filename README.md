@@ -10,7 +10,7 @@ aba is a CLI tool for looking up (and expanding) ABA routing numbers.
 
 ## Usage
 
-Signup for a [https://dashboard.moov.io](Moov Account) and [setup the environment variables](https://github.com/moovfinancial/moov-go?tab=readme-ov-file#moov---go-client) for Moov's Go SDK.
+Signup for a [Moov Account](https://dashboard.moov.io) and [setup the environment variables](https://github.com/moovfinancial/moov-go?tab=readme-ov-file#moov---go-client) for Moov's Go SDK.
 
 ```
 $ aba -ach 27397636
