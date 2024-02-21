@@ -1,6 +1,5 @@
 # aba
 
-[![GoDoc](https://godoc.org/github.com/adamdecaf/aba?status.svg)](https://pkg.go.dev/github.com/adamdecaf/aba/pkg/aba)
 [![Build Status](https://github.com/adamdecaf/aba/workflows/Go/badge.svg)](https://github.com/adamdecaf/aba/actions)
 [![Coverage Status](https://codecov.io/gh/adamdecaf/aba/branch/master/graph/badge.svg)](https://codecov.io/gh/adamdecaf/aba)
 [![Go Report Card](https://goreportcard.com/badge/github.com/adamdecaf/aba)](https://goreportcard.com/report/github.com/adamdecaf/aba)
