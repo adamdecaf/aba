@@ -22,4 +22,5 @@ go.work
 
 /aba
 /bin/
+/coverage.txt
 /lint-project.sh
