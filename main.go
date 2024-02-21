@@ -6,6 +6,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"io"
 	"os"
 	"strings"
 	"text/tabwriter"
@@ -32,9 +33,9 @@ func main() {
 
 	switch {
 	case *flagAch:
-		printAchParticipants(resp.AchParticipants)
+		printAchParticipants(os.Stdout, resp.AchParticipants)
 	case *flagWire:
-		printWireParticipants(resp.WireParticipants)
+		printWireParticipants(os.Stdout, resp.WireParticipants)
 	default:
 		fmt.Println(routingNumber) //nolint:forbidigo
 	}
@@ -77,8 +78,8 @@ func listRoutingNumbers(routingNumber string) (*moov.FinancialInstitutions, erro
 	return resp, nil
 }
 
-func printAchParticipants(participants []moov.AchParticipant) {
-	w := tabwriter.NewWriter(os.Stdout, 0, 0, 2, ' ', 0)
+func printAchParticipants(buf io.Writer, participants []moov.AchParticipant) {
+	w := tabwriter.NewWriter(buf, 0, 0, 2, ' ', 0)
 	defer w.Flush()
 
 	fmt.Fprintln(w, "Routing Number\tCustomer Name\tPhone Number\tAddress")
@@ -90,8 +91,8 @@ func printAchParticipants(participants []moov.AchParticipant) {
 	}
 }
 
-func printWireParticipants(participants []moov.WireParticipant) {
-	w := tabwriter.NewWriter(os.Stdout, 0, 0, 2, ' ', 0)
+func printWireParticipants(buf io.Writer, participants []moov.WireParticipant) {
+	w := tabwriter.NewWriter(buf, 0, 0, 2, ' ', 0)
 	defer w.Flush()
 
 	fmt.Fprintln(w, "Routing Number\tTelegraphic Name\tCustomer Name\tFund Transfers\tSettlement Only\tBook Entry Transfers\tAddress")
