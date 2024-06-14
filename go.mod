@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/moov-io/ach v1.34.2
-	github.com/moovfinancial/moov-go v0.1.0
+	github.com/moovfinancial/moov-go v0.2.0
 	github.com/stretchr/testify v1.9.0
 )
 
