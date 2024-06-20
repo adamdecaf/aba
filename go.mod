@@ -1,10 +1,12 @@
 module github.com/adamdecaf/aba
 
-go 1.22.2
+go 1.22.3
+
+toolchain go1.22.4
 
 require (
 	github.com/moov-io/ach v1.40.3
-	github.com/moovfinancial/moov-go v0.2.0
+	github.com/moovfinancial/moov-go v0.3.0
 	github.com/stretchr/testify v1.9.0
 )
 
