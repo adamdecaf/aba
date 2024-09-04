@@ -22,9 +22,10 @@ func TestPrint(t *testing.T) {
 	t.Run("ach", func(t *testing.T) {
 		var buf bytes.Buffer
 
+		routingNumber := "021201383"
 		participants := []moov.AchParticipant{
 			{
-				RoutingNumber:      "021201383",
+				RoutingNumber:      routingNumber,
 				OfficeCode:         "O",
 				ServicingFRBNumber: "021001208",
 				RecordTypeCode:     "1",
@@ -43,7 +44,7 @@ func TestPrint(t *testing.T) {
 				},
 			},
 		}
-		printAchParticipants(&buf, participants)
+		printAchParticipants(&buf, routingNumber, participants)
 
 		expected := strings.TrimSpace(`
 Routing Number  Customer Name         Phone Number  Address
