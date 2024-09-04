@@ -33,7 +33,7 @@ func main() {
 
 	switch {
 	case *flagAch:
-		printAchParticipants(os.Stdout, resp.AchParticipants)
+		printAchParticipants(os.Stdout, routingNumber, resp.AchParticipants)
 	case *flagWire:
 		printWireParticipants(os.Stdout, resp.WireParticipants)
 	default:
@@ -78,11 +78,23 @@ func listRoutingNumbers(routingNumber string) (*moov.FinancialInstitutions, erro
 	return resp, nil
 }
 
-func printAchParticipants(buf io.Writer, participants []moov.AchParticipant) {
+func printAchParticipants(buf io.Writer, routingNumber string, participants []moov.AchParticipant) {
 	w := tabwriter.NewWriter(buf, 0, 0, 2, ' ', 0)
 	defer w.Flush()
 
 	fmt.Fprintln(w, "Routing Number\tCustomer Name\tPhone Number\tAddress")
+
+	// If nothing was found at least show the routing number
+	if len(participants) == 0 {
+		if len(routingNumber) == 8 {
+			routingNumber = fmt.Sprintf("%s%d", routingNumber, ach.CalculateCheckDigit(routingNumber))
+		}
+		participants = append(participants, moov.AchParticipant{
+			RoutingNumber: routingNumber,
+			CustomerName:  "Unknown",
+		})
+	}
+
 	for _, p := range participants {
 		location := fmt.Sprintf("%s %s %s %s",
 			p.AchLocation.Address, p.AchLocation.City, p.AchLocation.State, p.AchLocation.PostalCode)
