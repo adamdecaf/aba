@@ -6,7 +6,7 @@ toolchain go1.24.1
 
 require (
 	github.com/moov-io/ach v1.45.5
-	github.com/moovfinancial/moov-go v0.10.0
+	github.com/moovfinancial/moov-go v0.11.0
 	github.com/stretchr/testify v1.10.0
 )
 
