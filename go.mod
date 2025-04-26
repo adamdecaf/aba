@@ -1,18 +1,18 @@
 module github.com/adamdecaf/aba
 
-go 1.23.0
+go 1.24
 
 toolchain go1.24.2
 
 require (
 	github.com/moov-io/ach v1.48.0
-	github.com/moovfinancial/moov-go v0.12.0
+	github.com/moovfinancial/moov-go v0.14.0
 	github.com/stretchr/testify v1.10.0
 )
 
 require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
-	github.com/go-jose/go-jose/v4 v4.0.5 // indirect
+	github.com/go-jose/go-jose/v4 v4.1.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/igrmk/treemap/v2 v2.0.1 // indirect
 	github.com/moov-io/base v0.54.4 // indirect
