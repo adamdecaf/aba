@@ -48,6 +48,8 @@ github.com/moov-io/ach v1.49.0 h1:ZBzW/dYBE0s6GQOqhPzn8v31c/scXHnGrpN1T0g/GFk=
 github.com/moov-io/ach v1.49.0/go.mod h1:oxpwpQV4VJ//4xlOOvJGBitGFU32m5aymdDF8ioV6Do=
 github.com/moov-io/ach v1.49.1 h1:AYraOKw6s7JXJLP1hsE0oFu2B34shFPRIsJRsSad2z0=
 github.com/moov-io/ach v1.49.1/go.mod h1:oxpwpQV4VJ//4xlOOvJGBitGFU32m5aymdDF8ioV6Do=
+github.com/moov-io/ach v1.49.2 h1:HuCavHVD9+SvqevKiNoFSlzSNkQ+gXQqrvGOmYZZrqY=
+github.com/moov-io/ach v1.49.2/go.mod h1:wi99Q17QmSVX/KYNA60JJULFkq3fYgdUoZo18kYCUyM=
 github.com/moov-io/base v0.48.5 h1:QaTyTo6eFFFV35R9l/GdePQN40IJti9knD5hqdWPnnM=
 github.com/moov-io/base v0.48.5/go.mod h1:D5ZV9COV/qtCjTQuYpq7gGInCk64AhOQI6UY4kt4Rq8=
 github.com/moov-io/base v0.49.4 h1:vN80/CR4qLa9D3VZAv9qGYHHG6joXdvKy5YmOJ/9cB4=
@@ -104,6 +106,8 @@ github.com/moovfinancial/moov-go v0.15.1 h1:8v8iPYvIZmfhAjvKeHD+qvDcFzmTPFC9Yi7e
 github.com/moovfinancial/moov-go v0.15.1/go.mod h1:kvwCMfFOx/g6O3ZkHRI4l4tjn6J/VwVPSAOOS+y680I=
 github.com/moovfinancial/moov-go v0.16.0 h1:MnhckgWZQ9PQCNCkNpbYX7dhaF8PGxR3FmWvz5x5wI0=
 github.com/moovfinancial/moov-go v0.16.0/go.mod h1:kvwCMfFOx/g6O3ZkHRI4l4tjn6J/VwVPSAOOS+y680I=
+github.com/moovfinancial/moov-go v0.16.1 h1:PHli/IK1RX4M3+AviypqFHzslGEA+GGx1KSEkOFxHzU=
+github.com/moovfinancial/moov-go v0.16.1/go.mod h1:kvwCMfFOx/g6O3ZkHRI4l4tjn6J/VwVPSAOOS+y680I=
 github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 h1:Jamvg5psRIccs7FGNTlIRMkT8wgtp5eCXdBlqhYGL6U=
 github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/rickar/cal/v2 v2.1.13 h1:FENBPXxDPyL1OWGf9ZdpWGcEiGoSjt0UZED8VOxvK0c=
