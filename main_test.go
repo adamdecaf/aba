@@ -22,29 +22,24 @@ func TestPrint(t *testing.T) {
 	t.Run("ach", func(t *testing.T) {
 		var buf bytes.Buffer
 
-		routingNumber := "021201383"
-		participants := []moov.AchParticipant{
+		institutions := []moov.ACHInstitution{
 			{
-				RoutingNumber:      routingNumber,
-				OfficeCode:         "O",
-				ServicingFRBNumber: "021001208",
-				RecordTypeCode:     "1",
-				Revised:            "020222",
-				NewRoutingNumber:   "000000000",
-				CustomerName:       "VALLEY NATIONAL BANK",
-				PhoneNumber:        "9733058800",
-				StatusCode:         "1",
-				ViewCode:           "1",
-				AchLocation: moov.AchLocation{
-					Address:             "ACH DEPARTMENT 4TH FLOOR",
-					City:                "WAYNE",
-					State:               "NJ",
-					PostalCode:          "07470",
-					PostalCodeExtension: "0000",
+				RoutingNumber: "021201383",
+				Name:          "VALLEY NATIONAL BANK",
+				Address: &moov.Address{
+					AddressLine1:    "ACH DEPARTMENT 4TH FLOOR",
+					City:            "WAYNE",
+					StateOrProvince: "NJ",
+					PostalCode:      "07470",
+				},
+				Contact: &moov.Contact{
+					Phone: &moov.Phone{
+						Number: "9733058800",
+					},
 				},
 			},
 		}
-		printAchParticipants(&buf, routingNumber, participants)
+		printAchInstitutions(&buf, institutions)
 
 		expected := strings.TrimSpace(`
 Routing Number  Customer Name         Phone Number  Address
@@ -54,29 +49,48 @@ Routing Number  Customer Name         Phone Number  Address
 
 	})
 
+	t.Run("rtp", func(t *testing.T) {
+		var buf bytes.Buffer
+
+		institutions := []moov.RTPInstitution{
+			{
+				Name:          "Veridian Credit Union",
+				RoutingNumber: "273976369",
+				Services: moov.RTPServices{
+					ReceivePayments:          true,
+					ReceiveRequestForPayment: true,
+				},
+			},
+		}
+		printRtpInstitutions(&buf, institutions)
+
+		expected := strings.TrimSpace(`
+Routing Number  Customer Name          Receive Payments  Receive Request for Payment
+273976369       Veridian Credit Union  true              true
+`)
+		require.Equal(t, expected, strings.TrimSpace(buf.String()))
+	})
+
 	t.Run("wire", func(t *testing.T) {
 		var buf bytes.Buffer
 
-		participants := []moov.WireParticipant{
+		institutions := []moov.WireInstitution{
 			{
-				RoutingNumber:   "273976369",
-				TelegraphicName: "VERIDIAN",
-				CustomerName:    "VERIDIAN CREDIT UNION",
-				Location: moov.WireLocation{
-					City:  "",
-					State: "",
+				RoutingNumber: "273976369",
+				Name:          "VERIDIAN CREDIT UNION",
+				Address:       nil,
+				Services: moov.WireServices{
+					FundsTransferStatus:               true,
+					FundsSettlementOnlyStatus:         false,
+					BookEntrySecuritiesTransferStatus: false,
 				},
-				FundsTransferStatus:               "Y",
-				FundsSettlementOnlyStatus:         " ",
-				BookEntrySecuritiesTransferStatus: "N",
-				Date:                              "20141107",
 			},
 		}
-		printWireParticipants(&buf, participants)
+		printWireInstitutions(&buf, institutions)
 
 		expected := strings.TrimSpace(`
-Routing Number  Telegraphic Name  Customer Name          Fund Transfers  Settlement Only  Book Entry Transfers  Address
-273976369       VERIDIAN          VERIDIAN CREDIT UNION  Y               N                N
+Routing Number  Customer Name          Fund Transfers  Settlement Only  Book Entry Transfers  Address
+273976369       VERIDIAN CREDIT UNION  true            false            false
 `)
 		require.Equal(t, expected, strings.TrimSpace(buf.String()))
 	})

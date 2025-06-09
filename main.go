@@ -40,7 +40,7 @@ func main() {
 		if all {
 			fmt.Println("ACH:")
 		}
-		printAchInstitutions(os.Stdout, routingNumber, resp.Ach)
+		printAchInstitutions(os.Stdout, resp.Ach)
 		if all {
 			fmt.Println("")
 		}
@@ -49,7 +49,7 @@ func main() {
 		if all {
 			fmt.Println("RTP:")
 		}
-		printRtpInstitutions(os.Stdout, routingNumber, resp.Rtp)
+		printRtpInstitutions(os.Stdout, resp.Rtp)
 		if all {
 			fmt.Println("")
 		}
@@ -68,7 +68,7 @@ func main() {
 func normalizeRoutingNumber(input string) string {
 	if len(input) == 8 {
 		checkDigit := ach.CalculateCheckDigit(input)
-		if checkDigit > 0 {
+		if checkDigit >= 0 {
 			input += fmt.Sprintf("%d", checkDigit)
 		}
 	}
@@ -102,7 +102,7 @@ func listRoutingNumbers(routingNumber string, limit int) (*moov.InstitutionsSear
 	return resp, nil
 }
 
-func printAchInstitutions(buf io.Writer, routingNumber string, participants []moov.ACHInstitution) {
+func printAchInstitutions(buf io.Writer, participants []moov.ACHInstitution) {
 	w := tabwriter.NewWriter(buf, 0, 0, 2, ' ', 0)
 	defer w.Flush()
 
@@ -125,7 +125,7 @@ func printAchInstitutions(buf io.Writer, routingNumber string, participants []mo
 	}
 }
 
-func printRtpInstitutions(buf io.Writer, routingNumber string, participants []moov.RTPInstitution) {
+func printRtpInstitutions(buf io.Writer, participants []moov.RTPInstitution) {
 	w := tabwriter.NewWriter(buf, 0, 0, 2, ' ', 0)
 	defer w.Flush()
 
