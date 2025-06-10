@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"flag"
 	"fmt"
@@ -36,33 +37,35 @@ func main() {
 	// Print everything if no flags were provided
 	all := !*flagAch && !*flagRtp && !*flagWire
 
+	var buf bytes.Buffer
 	if *flagAch || all {
 		if all {
-			fmt.Println("ACH:")
+			fmt.Fprintln(&buf, "ACH:")
 		}
 		printAchInstitutions(os.Stdout, resp.Ach)
 		if all {
-			fmt.Println("")
+			fmt.Fprintln(&buf, "")
 		}
 	}
 	if *flagRtp || all {
 		if all {
-			fmt.Println("RTP:")
+			fmt.Fprintln(&buf, "RTP:")
 		}
 		printRtpInstitutions(os.Stdout, resp.Rtp)
 		if all {
-			fmt.Println("")
+			fmt.Fprintln(&buf, "")
 		}
 	}
 	if *flagWire || all {
 		if all {
-			fmt.Println("Wire:")
+			fmt.Fprintln(&buf, "Wire:")
 		}
 		printWireInstitutions(os.Stdout, resp.Wire)
 		if all {
-			fmt.Println("")
+			fmt.Fprintln(&buf, "")
 		}
 	}
+	fmt.Println(buf.String()) //nolint:forbidigo
 }
 
 func normalizeRoutingNumber(input string) string {
