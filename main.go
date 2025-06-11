@@ -42,7 +42,7 @@ func main() {
 		if all {
 			fmt.Fprintln(&buf, "ACH:")
 		}
-		printAchInstitutions(os.Stdout, resp.Ach)
+		printAchInstitutions(&buf, resp.Ach)
 		if all {
 			fmt.Fprintln(&buf, "")
 		}
@@ -51,7 +51,7 @@ func main() {
 		if all {
 			fmt.Fprintln(&buf, "RTP:")
 		}
-		printRtpInstitutions(os.Stdout, resp.Rtp)
+		printRtpInstitutions(&buf, resp.Rtp)
 		if all {
 			fmt.Fprintln(&buf, "")
 		}
@@ -60,7 +60,7 @@ func main() {
 		if all {
 			fmt.Fprintln(&buf, "Wire:")
 		}
-		printWireInstitutions(os.Stdout, resp.Wire)
+		printWireInstitutions(&buf, resp.Wire)
 		if all {
 			fmt.Fprintln(&buf, "")
 		}
