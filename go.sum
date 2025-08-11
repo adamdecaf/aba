@@ -6,6 +6,8 @@ github.com/go-jose/go-jose/v4 v4.1.0 h1:cYSYxd3pw5zd2FSXk2vGdn9igQU2PS8MuxrCOCl0
 github.com/go-jose/go-jose/v4 v4.1.0/go.mod h1:GG/vqmYm3Von2nYiB2vGTXzdoNKE5tix5tuc6iAd+sw=
 github.com/go-jose/go-jose/v4 v4.1.1 h1:JYhSgy4mXXzAdF3nUx3ygx347LRXJRrpgyU3adRmkAI=
 github.com/go-jose/go-jose/v4 v4.1.1/go.mod h1:BdsZGqgdO3b6tTc6LSE56wcDbMMLuPsw5d4ZD5f94kA=
+github.com/go-jose/go-jose/v4 v4.1.2 h1:TK/7NqRQZfgAh+Td8AlsrvtPoUyiHh0LqVvokh+1vHI=
+github.com/go-jose/go-jose/v4 v4.1.2/go.mod h1:22cg9HWM1pOlnRiY+9cQYJ9XHmya1bYW8OeDM6Ku6Oo=
 github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=
 github.com/google/go-cmp v0.7.0/go.mod h1:pXiqmnSA92OHEEa9HXL2W4E7lf9JzCmGVUdgjX3N/iU=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
@@ -52,6 +54,8 @@ github.com/moovfinancial/moov-go v0.20.5 h1:WLCu/cOI+MJVhRUEMMu2oJmesnmIRz9Hl8f9
 github.com/moovfinancial/moov-go v0.20.5/go.mod h1:2QhZXC3UwujmHOAqia8P4JMHjMYaqHunyG0dYHOmkfc=
 github.com/moovfinancial/moov-go v0.21.0 h1:V9/0y8mahv34f0Q/5QtvDMYMvYzJ6hA2CNLvNBqOsCU=
 github.com/moovfinancial/moov-go v0.21.0/go.mod h1:2QhZXC3UwujmHOAqia8P4JMHjMYaqHunyG0dYHOmkfc=
+github.com/moovfinancial/moov-go v0.21.1 h1:eq5UzvwAGNhf8yfxcbt3bJc0NyO0Alg6D0mB+K05q7Y=
+github.com/moovfinancial/moov-go v0.21.1/go.mod h1:RX21txP6eqzqSf4VBC1H0dcYJdMayJHXyDTr1rSPTUw=
 github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 h1:Jamvg5psRIccs7FGNTlIRMkT8wgtp5eCXdBlqhYGL6U=
 github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/rickar/cal/v2 v2.1.23 h1:uTYRCpZwMKIBIyNhjf+24ukdt3n8JegMZCst4om79FA=
