@@ -6,13 +6,13 @@ toolchain go1.24.6
 
 require (
 	github.com/moov-io/ach v1.52.1
-	github.com/moovfinancial/moov-go v0.21.0
+	github.com/moovfinancial/moov-go v0.21.1
 	github.com/stretchr/testify v1.10.0
 )
 
 require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
-	github.com/go-jose/go-jose/v4 v4.1.1 // indirect
+	github.com/go-jose/go-jose/v4 v4.1.2 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/igrmk/treemap/v2 v2.0.1 // indirect
 	github.com/moov-io/base v0.57.0 // indirect
