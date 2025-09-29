@@ -16,9 +16,10 @@ import (
 )
 
 var (
-	flagAch  = flag.Bool("ach", false, "Find the routing number in the Fed ACH directory")
-	flagRtp  = flag.Bool("rtp", false, "Find the routing number in the RTP participant directory")
-	flagWire = flag.Bool("wire", false, "Find the routing number in the Fed Wire directory")
+	flagAch    = flag.Bool("ach", false, "Find the routing number in the Fed ACH directory")
+	flagFedNow = flag.Bool("fednow", false, "Find the routing number in the FedNOW directory")
+	flagRtp    = flag.Bool("rtp", false, "Find the routing number in the RTP participant directory")
+	flagWire   = flag.Bool("wire", false, "Find the routing number in the Fed Wire directory")
 
 	flagLimit = flag.Int("limit", 1, "How many institutions to return for each rail")
 )
@@ -35,7 +36,7 @@ func main() {
 	}
 
 	// Print everything if no flags were provided
-	all := !*flagAch && !*flagRtp && !*flagWire
+	all := !*flagAch && !*flagFedNow && !*flagRtp && !*flagWire
 
 	var buf bytes.Buffer
 	if *flagAch || all {
@@ -43,6 +44,15 @@ func main() {
 			fmt.Fprintln(&buf, "ACH:")
 		}
 		printAchInstitutions(&buf, resp.Ach)
+		if all {
+			fmt.Fprintln(&buf, "")
+		}
+	}
+	if *flagFedNow || all {
+		if all {
+			fmt.Fprintln(&buf, "FedNow:")
+		}
+		printFedNowInstitutions(&buf, resp.FedNow)
 		if all {
 			fmt.Fprintln(&buf, "")
 		}
@@ -128,6 +138,22 @@ func printAchInstitutions(buf io.Writer, participants []moov.ACHInstitution) {
 	}
 }
 
+func printFedNowInstitutions(buf io.Writer, participants []moov.FedNowInstitution) {
+	w := tabwriter.NewWriter(buf, 0, 0, 2, ' ', 0)
+	defer w.Flush()
+
+	fmt.Fprintln(w, "Routing Number\tCustomer Name\tReceive Payments\tSend Payments\tRequest for Payment")
+
+	for _, p := range participants {
+		fmt.Fprintf(w, "%s\t%s\t%v\t%v\n",
+			p.RoutingNumber, p.Name,
+			p.Services.ReceivePayments,
+			p.Services.SendPayments,
+			p.Services.RequestForPayment,
+		)
+	}
+}
+
 func printRtpInstitutions(buf io.Writer, participants []moov.RTPInstitution) {
 	w := tabwriter.NewWriter(buf, 0, 0, 2, ' ', 0)
 	defer w.Flush()
@@ -137,7 +163,8 @@ func printRtpInstitutions(buf io.Writer, participants []moov.RTPInstitution) {
 	for _, p := range participants {
 		fmt.Fprintf(w, "%s\t%s\t%v\t%v\n",
 			p.RoutingNumber, p.Name,
-			p.Services.ReceivePayments, p.Services.ReceiveRequestForPayment,
+			p.Services.ReceivePayments,
+			p.Services.ReceiveRequestForPayment,
 		)
 	}
 }
