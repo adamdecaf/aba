@@ -145,7 +145,7 @@ func printFedNowInstitutions(buf io.Writer, participants []moov.FedNowInstitutio
 	fmt.Fprintln(w, "Routing Number\tCustomer Name\tReceive Payments\tSend Payments\tRequest for Payment")
 
 	for _, p := range participants {
-		fmt.Fprintf(w, "%s\t%s\t%v\t%v\n",
+		fmt.Fprintf(w, "%s\t%s\t%v\t%v\t%v\n",
 			p.RoutingNumber, p.Name,
 			p.Services.ReceivePayments,
 			p.Services.SendPayments,
