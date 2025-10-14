@@ -2,11 +2,11 @@ module github.com/adamdecaf/aba
 
 go 1.24.0
 
-toolchain go1.25.2
+toolchain go1.25.3
 
 require (
 	github.com/moov-io/ach v1.53.0
-	github.com/moovfinancial/moov-go v0.24.1
+	github.com/moovfinancial/moov-go v0.25.0
 	github.com/stretchr/testify v1.11.1
 )
 
@@ -25,5 +25,6 @@ require (
 	golang.org/x/net v0.43.0 // indirect
 	golang.org/x/sync v0.17.0 // indirect
 	golang.org/x/text v0.29.0 // indirect
+	golang.org/x/time v0.14.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
