@@ -2,7 +2,7 @@ module github.com/adamdecaf/aba
 
 go 1.24.0
 
-toolchain go1.25.4
+toolchain go1.25.5
 
 require (
 	github.com/moov-io/ach v1.53.4
