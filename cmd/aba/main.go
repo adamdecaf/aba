@@ -11,6 +11,8 @@ import (
 	"strings"
 	"text/tabwriter"
 
+	"github.com/adamdecaf/aba"
+
 	"github.com/moov-io/ach"
 	"github.com/moovfinancial/moov-go/pkg/moov"
 )
@@ -22,10 +24,17 @@ var (
 	flagWire   = flag.Bool("wire", false, "Find the routing number in the Fed Wire directory")
 
 	flagLimit = flag.Int("limit", 1, "How many institutions to return for each rail")
+
+	flagVersion = flag.Bool("version", false, "Print the version of aba")
 )
 
 func main() {
 	flag.Parse()
+
+	if *flagVersion {
+		fmt.Printf("aba %s", aba.Version)
+		return
+	}
 
 	routingNumber := normalizeRoutingNumber(flag.Arg(0))
 

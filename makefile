@@ -1,3 +1,21 @@
+ifndef VERSION
+	ifndef RELEASE
+	# If we're not publishing a release, set the dev commit hash
+		ifndef DEV_TAG_SHA
+			COMMIT_HASH :=$(shell git rev-parse --short=7 HEAD)
+		else
+			COMMIT_HASH :=$(shell echo ${DEV_TAG_SHA} | cut -c 1-7)
+		endif
+		VERSION := dev-${COMMIT_HASH}
+	else
+		VERSION := $(shell git describe --tags --abbrev=0)
+	endif
+endif
+
+.PHONY: build
+build:
+	go build -o ./bin/aba -ldflags "-X github.com/adamdecaf/aba.Version=${VERSION}" github.com/adamdecaf/aba/cmd/aba
+
 .PHONY: check
 check:
 ifeq ($(OS),Windows_NT)

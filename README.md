@@ -11,7 +11,7 @@ aba is a CLI tool for looking up (and expanding) ABA routing numbers.
 
 You can install from source:
 ```
-go install github.com/adamdecaf/aba@latest
+go install github.com/adamdecaf/aba/cmd/aba@latest
 ```
 
 ## Usage
