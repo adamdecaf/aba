@@ -2,6 +2,7 @@ builds:
 - main: ./cmd/aba/
   env:
     - CGO_ENABLED=0
+    - RELEASE=yes
   goos:
     - linux
     - darwin
@@ -14,3 +15,9 @@ builds:
       goarch: arm64
     - goos: darwin
       goarch: 386
+  ldflags:
+    - -s -w # strip debug info + DWARF
+    - -X main.Version={{ .Version }}
+    - -X main.Commit={{ .FullCommit }}
+    - -X main.Date={{ .Date }}
+    - -X github.com/adamdecaf/aba.Version={{ .Tag }}
