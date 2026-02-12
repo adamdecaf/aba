@@ -12,6 +12,8 @@ github.com/joho/godotenv v1.5.1 h1:7eLL/+HRGLY0ldzfGMeQkb7vMd0as4CfYvUVzLqw0N0=
 github.com/joho/godotenv v1.5.1/go.mod h1:f4LDr5Voq0i2e/R5DDNOoa2zzDfwtkZa6DnEwAbqwq4=
 github.com/moov-io/ach v1.55.3 h1:Bq+eKOT44iRS7h925N5dnl+VCRmnRyu164iJrsLI91Y=
 github.com/moov-io/ach v1.55.3/go.mod h1:Vr/+AF3iY+BKUjn6buknLGX+QjwLTTpu+ZLSlOgTuTQ=
+github.com/moov-io/ach v1.55.4 h1:UkesdyO7HAQNuy1ZS0t2Sy84uuuOU6sQwxnb6VMcKIU=
+github.com/moov-io/ach v1.55.4/go.mod h1:eX+9NFlDuHN/l4abHfrkb8phTj3ZRyTOHWV70kFr82c=
 github.com/moov-io/base v0.61.0 h1:CAAWAewgq0zCESnKUne/1YGtYfvxYxr7vLUKa21hOVk=
 github.com/moov-io/base v0.61.0/go.mod h1:ARSrOTripCz/nWDFUhSU8mRhySB3oEwqdhv/DanHzTA=
 github.com/moov-io/iso3166 v0.4.0 h1:WtXIptANC16DrHpbSAt4+itFciCCnA+C6eAi9k7HEsA=
@@ -20,6 +22,8 @@ github.com/moov-io/iso4217 v0.3.2 h1:/PNKwvt0LCaDx3r5cQEjIdX6a7PEELWJ8D5thi2jiHU
 github.com/moov-io/iso4217 v0.3.2/go.mod h1:IoD1XWQwCZBhFk9YlfQwvRW3TGlk7IoZX9OEe2PG19M=
 github.com/moovfinancial/moov-go v0.40.0 h1:QW7aOX3kKvPlEOfQfgZQj9bodz4qkwQ0BcqfEAP1gKQ=
 github.com/moovfinancial/moov-go v0.40.0/go.mod h1:hWHrF22Sgrames5ZLXfFykquvhxy+VEfRas6N8O0dGo=
+github.com/moovfinancial/moov-go v0.42.0 h1:YEOLJbMjJ99p3ihK0zZMytvpLcEd0NUIEycCBtNqvRY=
+github.com/moovfinancial/moov-go v0.42.0/go.mod h1:CMtx8rIJtsxWqrG8cyqek7cLN8VlAzoMiZSMw+sE9I8=
 github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 h1:Jamvg5psRIccs7FGNTlIRMkT8wgtp5eCXdBlqhYGL6U=
 github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/rickar/cal/v2 v2.1.27 h1:4vFfbXI9dB1Rb/mHH51xYx36ILWk0Wu8VY0bMnoTMpw=
