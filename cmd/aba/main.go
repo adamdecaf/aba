@@ -37,6 +37,7 @@ func main() {
 	}
 
 	routingNumber := normalizeRoutingNumber(flag.Arg(0))
+	fmt.Printf("Searching for %s\n", routingNumber)
 
 	resp, err := listRoutingNumbers(routingNumber, *flagLimit)
 	if err != nil {
