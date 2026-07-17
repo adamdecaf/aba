@@ -41,7 +41,7 @@ func main() {
 
 	resp, err := listRoutingNumbers(routingNumber, *flagLimit)
 	if err != nil {
-		fmt.Printf("ERROR: routing number lookup failed: %v\n", err) //nolint:forbidigo
+		fmt.Printf("ERROR: routing number lookup failed: %v\n", err)
 		os.Exit(1)
 	}
 
@@ -85,7 +85,7 @@ func main() {
 			fmt.Fprintln(&buf, "")
 		}
 	}
-	fmt.Println(buf.String()) //nolint:forbidigo
+	fmt.Println(buf.String())
 }
 
 func normalizeRoutingNumber(input string) string {
