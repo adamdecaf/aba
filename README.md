@@ -25,6 +25,13 @@ Routing Number  Customer Name          Phone Number  Address
 ```
 
 ```
+$ aba -fednow 021000021
+Searching for 021000021
+Routing Number  Customer Name            Receive Payments  Send Payments  Request for Payment
+021000021       JPMORGAN CHASE BANK, NA  true              true           false
+```
+
+```
 $ aba -rtp 071919133
 Routing Number  Customer Name     Receive Payments  Receive Request for Payment
 071919133       Fifth Third Bank  true              false
@@ -42,11 +49,16 @@ Searching by a Financial Institution's name is also supported.
 
 ```
 $ aba -limit 3 Veridian
+Searching for Veridian
 ACH:
 Routing Number  Customer Name          Phone Number  Address
 273975700       VERIDIAN CREDIT UNION  3192747598    1827 ANSBOROUGH AVE WATERLOO IA 50701
 273976369       VERIDIAN CREDIT UNION  3192878332    1827 ANSBOROUGH AVE WATERLOO IA 50701
 273976479       VERIDIAN CREDIT UNION  3192878332    1827 ANSBOROUGH AVE WATERLOO IA 50701
+
+FedNow:
+Routing Number  Customer Name          Receive Payments  Send Payments  Request for Payment
+273976369       VERIDIAN CREDIT UNION  true              true           false
 
 RTP:
 Routing Number  Customer Name          Receive Payments  Receive Request for Payment
@@ -54,9 +66,9 @@ Routing Number  Customer Name          Receive Payments  Receive Request for Pay
 
 Wire:
 Routing Number  Customer Name          Fund Transfers  Settlement Only  Book Entry Transfers  Address
-273975700       VERIDIAN CREDIT UNION  true            false            false                 OELWEIN IA
 273976369       VERIDIAN CREDIT UNION  true            false            false                 WATERLOO IA
 031918828       MERIDIAN BANK          true            false            true                  MALVERN PA
+307086701       MERIDIAN TRUST FCU     true            false            true                  CHEYENNE WY
 ```
 
 ## Supported and tested platforms
