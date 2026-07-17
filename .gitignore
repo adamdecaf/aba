@@ -24,3 +24,4 @@ go.work
 /bin/
 /coverage.txt
 /lint-project.sh
+.golangci-lint-generated.yml
