@@ -40,6 +40,8 @@ github.com/moovfinancial/moov-go v0.47.7 h1:GLVSTV8rIZwPoXzRf99jvl/Thbh1Z+6+NFGk
 github.com/moovfinancial/moov-go v0.47.7/go.mod h1:weVh1xMrbPT2yrtLP5J3mrMyqEpXv4ZWc1mrEG3oWqs=
 github.com/moovfinancial/moov-go v0.47.8 h1:3wqkJoR+yAUIBMpYIUuzXfQuG1SpSS5sb7fZniq92bk=
 github.com/moovfinancial/moov-go v0.47.8/go.mod h1:cQZJlg5uyu8UUbsY0U0v4MP8/FlbGJr2FvAH3ZDWpG4=
+github.com/moovfinancial/moov-go v0.48.0 h1:57aJlpJ4D+b9B6tPLab5FBKCkFzOpjnGZqW+tEDOC2E=
+github.com/moovfinancial/moov-go v0.48.0/go.mod h1:342kSdMPFgZRVw7edloY0mAhNGvCGDLpy2PEAVRX5lg=
 github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 h1:Jamvg5psRIccs7FGNTlIRMkT8wgtp5eCXdBlqhYGL6U=
 github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/rickar/cal/v2 v2.1.27 h1:4vFfbXI9dB1Rb/mHH51xYx36ILWk0Wu8VY0bMnoTMpw=
