@@ -2,10 +2,10 @@ module github.com/adamdecaf/aba
 
 go 1.26.0
 
-toolchain go1.27.2
+toolchain go1.27.3
 
 require (
-	github.com/moov-io/ach v1.64.0
+	github.com/moov-io/ach v1.65.1
 	github.com/moovfinancial/moov-go v0.54.1
 	github.com/stretchr/testify v1.12.1
 )
@@ -15,16 +15,16 @@ require (
 	github.com/go-jose/go-jose/v4 v4.1.6 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/igrmk/treemap/v2 v2.0.1 // indirect
-	github.com/moov-io/base v0.63.3 // indirect
+	github.com/moov-io/base v0.64.0 // indirect
 	github.com/moov-io/iso3166 v0.4.0 // indirect
 	github.com/moov-io/iso4217 v0.4.0 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
-	github.com/rickar/cal/v2 v2.1.29 // indirect
+	github.com/rickar/cal/v2 v2.1.32 // indirect
 	go.yaml.in/yaml/v3 v3.0.5 // indirect
 	golang.org/x/exp v0.0.0-20260529124908-c761662dc8c9 // indirect
-	golang.org/x/net v0.59.0 // indirect
-	golang.org/x/sync v0.23.0 // indirect
-	golang.org/x/text v0.42.0 // indirect
+	golang.org/x/net v0.61.0 // indirect
+	golang.org/x/sync v0.24.0 // indirect
+	golang.org/x/text v0.43.0 // indirect
 	golang.org/x/time v0.16.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
