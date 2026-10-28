@@ -5,7 +5,7 @@ go 1.26.0
 toolchain go1.27.3
 
 require (
-	github.com/moov-io/ach v1.66.0
+	github.com/moov-io/ach v1.67.0
 	github.com/moovfinancial/moov-go v0.55.0
 	github.com/stretchr/testify v1.12.1
 )
@@ -22,7 +22,7 @@ require (
 	github.com/rickar/cal/v2 v2.1.32 // indirect
 	go.yaml.in/yaml/v3 v3.0.5 // indirect
 	golang.org/x/exp v0.0.0-20260529124908-c761662dc8c9 // indirect
-	golang.org/x/net v0.61.0 // indirect
+	golang.org/x/net v0.62.0 // indirect
 	golang.org/x/sync v0.24.0 // indirect
 	golang.org/x/text v0.43.0 // indirect
 	golang.org/x/time v0.16.0 // indirect
